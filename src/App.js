@@ -28,9 +28,12 @@ export const App = () => {
 
               <Route path="/exchanges" element={<Exchanges />} />
 
-              <Route path="/cryptos" element={<Cryptocurrencies />} />
-
               <Route path="/cryptos/:coinId" element={<CryptoDetails />} />
+
+              <Route
+                path="/cryptocurrencies"
+                element={<Cryptocurrencies simplified={false} />}
+              />
 
               <Route path="/news" element={<CryptoNews />} />
             </Routes>

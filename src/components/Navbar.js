@@ -27,7 +27,7 @@ export const Navbar = () => {
           <Link to={"/"}>Home</Link>
         </Menu.Item>
         <Menu.Item icon={<FundOutlined />} key="2">
-          <Link to={"/cyptos"}>Cryptocurrencies</Link>
+          <Link to={"/cryptocurrencies"}>Cryptocurrencies</Link>
         </Menu.Item>
         <Menu.Item icon={<MoneyCollectOutlined />} key="3">
           <Link to={"/exchanges"}>Exchanges</Link>
