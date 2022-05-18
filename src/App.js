@@ -1,9 +1,57 @@
 import React from "react";
+import "./App.css";
+
+import { Route, Routes, Link } from "react-router-dom";
+
+import { Layout, Typography, Space } from "antd";
+
+import {
+  Navbar,
+  Homepage,
+  Exchanges,
+  Cryptocurrencies,
+  CryptoDetails,
+  CryptoNews,
+} from "./components";
 
 export const App = () => {
   return (
-    <div>
-      <h1>CryptoDomain</h1>
+    <div className="app">
+      <div className="navbar">
+        <Navbar />
+      </div>
+      <div className="main">
+        <Layout>
+          <div className="routes">
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+
+              <Route path="/exchanges" element={<Exchanges />} />
+
+              <Route path="/cryptos" element={<Cryptocurrencies />} />
+
+              <Route path="/cryptos/:coinId" element={<CryptoDetails />} />
+
+              <Route path="/news" element={<CryptoNews />} />
+            </Routes>
+          </div>
+        </Layout>
+
+        <div className="footer">
+          <Typography.Title
+            level={5}
+            style={{ color: "#fff", textAlign: "center" }}
+          >
+            CryptoDomain <br />
+            &copy;{`${new Date().getFullYear()}`} All right reserved{" "}
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
+      </div>
     </div>
   );
 };
