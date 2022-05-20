@@ -28,7 +28,7 @@ export const App = () => {
 
               <Route path="/exchanges" element={<Exchanges />} />
 
-              <Route path="/cryptos/:coinId" element={<CryptoDetails />} />
+              <Route path="/crypto/:coinId" element={<CryptoDetails />} />
 
               <Route
                 path="/cryptocurrencies"
